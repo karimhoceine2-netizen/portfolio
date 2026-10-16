@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Karim — first-year AI student at Vrije Universiteit Amsterdam, building web apps and automation projects. Explore Dossier Compleet and LeadFlow.">
+  <meta name="theme-color" content="#EDF2F7">
+  <title>Karim — Web & automation projects</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/atkinson-next.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#projects">Skip to projects</a>
+<div class="page">
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="Karim, home">karim<span aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#about">About</a><a href="https://github.com/karimhoceine2-netizen">GitHub <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="intro">
+      <div class="hero-copy">
+        <p class="eyebrow">First-year AI student · VU Amsterdam</p>
+        <h1 id="intro">Web apps.<br>Workflows.<br><span>Working together.</span></h1>
+        <p class="intro">I’m Karim. I build interfaces and the automation behind them — turning an input into a clear next step.</p>
+        <a class="primary" href="#projects">Explore my projects <span aria-hidden="true">↓</span></a>
+      </div>
+      <aside class="workflow" aria-label="How my projects connect inputs to actions">
+        <p class="eyebrow">The thread through my work</p>
+        <ol>
+          <li><span class="node" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM14 3v5h5M8 12h8M8 16h6"/></svg></span><div><h2>Start with an input</h2><p>A document, a form, a request.</p></div></li>
+          <li><span class="node" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="9" cy="6" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="9" cy="18" r="2"/></svg></span><div><h2>Make the rules clear</h2><p>Validate, record and handle retries.</p></div></li>
+          <li><span class="node final" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><h2>Keep people in control</h2><p>Review uncertainty. Choose what happens next.</p></div></li>
+        </ol>
+        <p class="workflow-note">Small, local demos. Understandable decisions.</p>
+      </aside>
+    </section>
+
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <div class="section-title"><div><p class="eyebrow">Selected work</p><h2 id="projects-title">Built to be explored.</h2></div><p>Two local demos, with synthetic data.<br>Built together with an AI coding assistant.</p></div>
+      <article class="project" aria-labelledby="dossier-title">
+        <div class="project-visual dossier-visual">
+          <div class="window-label"><span class="window-dot" aria-hidden="true"></span><span>DOCUMENT COLLECTION / LOCAL DEMO</span></div>
+          <img src="assets/dossier-dashboard.jpg" width="1280" height="1297" alt="Dossier Compleet dashboard showing mock client files, document status and a case waiting for human review" loading="lazy">
+          <p class="image-caption">Dossier Compleet · office dashboard · mock scenario</p>
+        </div>
+        <div class="project-copy">
+          <p class="project-category">Document workflow</p>
+          <h3 id="dossier-title">Dossier Compleet</h3>
+          <p class="project-summary">From missing paperwork to a clear next step.</p>
+          <dl class="case-study">
+            <div><dt>Problem</dt><dd>Document requests get scattered across inboxes. Missing items and uncertain uploads need a visible owner.</dd></div>
+            <div><dt>Solution</dt><dd>A client portal and office dashboard with explicit checks, human review, reminders and a local mail outbox.</dd></div>
+            <div><dt>Tech</dt><dd>Python · SQLite · HTML / CSS / JavaScript</dd></div>
+            <div><dt>Result</dt><dd>A working local workflow with tested rules. The default demo uses mock extraction fields; it makes no claim about AI accuracy or client results.</dd></div>
+          </dl>
+          <a class="project-link" href="https://github.com/karimhoceine2-netizen/dossier-compleet">Explore the source <span aria-hidden="true">↗</span><span class="sr-only"> for Dossier Compleet</span></a>
+        </div>
+      </article>
+      <article class="project project-leadflow" aria-labelledby="leadflow-title">
+        <div class="project-visual leadflow-visual">
+          <div class="window-label"><span class="window-dot" aria-hidden="true"></span><span>LEAD INTAKE / LOCAL DEMO</span></div>
+          <img src="assets/leadflow-dashboard.jpg" width="1280" height="987" alt="LeadFlow CRM showing synthetic leads, follow-up statuses and separate workflow processing statuses" loading="lazy">
+          <p class="image-caption">LeadFlow · CRM dashboard · mock webhook transport</p>
+        </div>
+        <div class="project-copy">
+          <p class="project-category">Intake & follow-up</p>
+          <h3 id="leadflow-title">LeadFlow</h3>
+          <p class="project-summary">A submitted form should not become a lost task.</p>
+          <dl class="case-study">
+            <div><dt>Problem</dt><dd>An intake app needs reliable follow-up when delivery fails or the same request arrives more than once.</dd></div>
+            <div><dt>Solution</dt><dd>A CRM backed by a durable event outbox, retries and idempotent processing. Manual follow-up stays separate from automation.</dd></div>
+            <div><dt>Tech</dt><dd>FastAPI · SQLite · Next.js · TypeScript · optional n8n</dd></div>
+            <div><dt>Result</dt><dd>A tested local pipeline with an offline mock-webhook demo. Priority uses fixed rules; live n8n and production deployment are separate next steps.</dd></div>
+          </dl>
+          <a class="project-link" href="https://github.com/karimhoceine2-netizen/leadflow">Explore the source <span aria-hidden="true">↗</span><span class="sr-only"> for LeadFlow</span></a>
+        </div>
+      </article>
+    </section>
+
+    <section id="about" class="about" aria-labelledby="about-title">
+      <div><p class="eyebrow">Still learning. Always building.</p><h2 id="about-title">An AI student who<br>likes to make things work.</h2></div>
+      <div class="about-copy"><p>I’m in my first year of Artificial Intelligence at Vrije Universiteit Amsterdam. I learn by building web and automation projects, testing their behavior, and documenting what I would improve next.</p><p>My current tools include Python, FastAPI, SQLite, JavaScript, TypeScript, React, Next.js and Git. I build with an AI coding assistant: I decide what a project should do, then read, run and test what we produce. Each README explains how it works, what is simulated and what I would improve next.</p><a class="project-link" href="https://github.com/karimhoceine2-netizen">Find me on GitHub <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="footer"><a class="wordmark" href="#top" aria-label="Back to top">karim<span aria-hidden="true">.</span></a><p>Web & automation projects<br><span>© 2026 Karim · No tracking.</span></p><a href="https://github.com/karimhoceine2-netizen/portfolio">This site’s source <span aria-hidden="true">↗</span></a></footer>
+</div>
+</body>
+</html>
