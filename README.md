@@ -20,7 +20,7 @@ Open <http://127.0.0.1:8097>, or open `dist/index.html` directly.
 
 ## Deploy on Vercel
 
-Framework preset **Other**, no build command, output directory **dist** (already set in `vercel.json`, which also adds basic security headers). After the first deploy, replace `SITE_URL` in `dist/index.html` with the live address so link previews show the image.
+Framework preset **Other**, no build command, output directory **dist** (already set in `vercel.json`, which also adds basic security headers).
 
 ## Structure
 
@@ -31,7 +31,7 @@ Framework preset **Other**, no build command, output directory **dist** (already
 
 Fonts: Instrument Sans and Geist Mono, self-hosted in `dist/assets/fonts/` (SIL Open Font License, see `LICENSE.txt` there). The site makes no third-party requests.
 
-CV: `dist/assets/CV_Karim_Hoceine.pdf` (Dutch, without phone number).
+CV: `dist/assets/CV_Karim_Hoceine_EN.pdf` and `CV_Karim_Hoceine_NL.pdf` (without phone number).
 
 ## License
 
