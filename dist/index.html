@@ -3,87 +3,213 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Karim — first-year AI student at Vrije Universiteit Amsterdam, building web apps and automation projects. Explore Dossier Compleet and LeadFlow.">
-  <meta name="theme-color" content="#EDF2F7">
-  <title>Karim — Web & automation projects</title>
+  <title>Karim Hoceine — I build AI that shows its work</title>
+  <meta name="description" content="Karim Hoceine, AI student at VU Amsterdam. A crash-safe agent runtime, a Dutch RAG system that finds the right source for 73 of 74 questions, and an outreach workflow with human review.">
+  <meta name="theme-color" content="#EEEDE9">
+  <!-- Social preview (LinkedIn, WhatsApp). Replace SITE_URL with the live address after deploying. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Karim Hoceine — I build AI that shows its work">
+  <meta property="og:description" content="AI student at VU Amsterdam. A crash-safe agent runtime, a Dutch RAG system that finds the right source for 73 of 74 questions, and the numbers behind them.">
+  <meta property="og:image" content="SITE_URL/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="SITE_URL/">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="assets/atkinson-next.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<a class="skip" href="#projects">Skip to projects</a>
-<div class="page">
-  <header class="topbar">
-    <a class="wordmark" href="#top" aria-label="Karim, home">karim<span aria-hidden="true">.</span></a>
-    <nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#about">About</a><a href="https://github.com/karimhoceine2-netizen">GitHub <span aria-hidden="true">↗</span></a></nav>
+  <a class="skip" href="#work">Skip to work</a>
+
+  <header class="nav" id="nav">
+    <a class="nav-name" href="#top" aria-label="Karim Hoceine, back to top"><span class="roll" data-text="Karim Hoceine">Karim Hoceine</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#work"><span class="roll" data-text="Work">Work</span></a>
+      <a href="#more"><span class="roll" data-text="Projects">Projects</span></a>
+      <a href="#about"><span class="roll" data-text="About">About</span></a>
+      <a href="#contact"><span class="roll" data-text="Contact">Contact</span></a>
+    </nav>
+    <div class="nav-meta"><p class="nav-status"><span class="dot" aria-hidden="true"></span><span>Available · AMS <time id="clock">--:--</time></span></p><a class="nav-cv" href="assets/CV_Karim_Hoceine.pdf" download>CV <span aria-hidden="true">↓</span></a></div>
   </header>
+
   <main id="top">
-    <section class="hero" aria-labelledby="intro">
-      <div class="hero-copy">
-        <p class="eyebrow">First-year AI student · VU Amsterdam</p>
-        <h1 id="intro">Web apps.<br>Workflows.<br><span>Working together.</span></h1>
-        <p class="intro">I’m Karim. I build interfaces and the automation behind them — turning an input into a clear next step.</p>
-        <a class="primary" href="#projects">Explore my projects <span aria-hidden="true">↓</span></a>
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="field" id="field" aria-hidden="true"></canvas>
+      <div class="hero-meta">
+        <p>AI student<br><span>VU Amsterdam</span></p>
+        <p>Founder<br><span>Magnifize</span></p>
+        <p>Open to part-time roles<br><span>16–24 h a week</span></p>
       </div>
-      <aside class="workflow" aria-label="How my projects connect inputs to actions">
-        <p class="eyebrow">The thread through my work</p>
-        <ol>
-          <li><span class="node" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM14 3v5h5M8 12h8M8 16h6"/></svg></span><div><h2>Start with an input</h2><p>A document, a form, a request.</p></div></li>
-          <li><span class="node" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="9" cy="6" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="9" cy="18" r="2"/></svg></span><div><h2>Make the rules clear</h2><p>Validate, record and handle retries.</p></div></li>
-          <li><span class="node final" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg></span><div><h2>Keep people in control</h2><p>Review uncertainty. Choose what happens next.</p></div></li>
-        </ol>
-        <p class="workflow-note">Small, local demos. Understandable decisions.</p>
-      </aside>
+      <h1 class="hero-title" id="hero-title" data-split="blur">I build AI that <em>shows its work.</em></h1>
+      <div class="hero-foot">
+        <p class="hero-sub" data-reveal>I’m Karim. I study Artificial Intelligence and spend my evenings building the systems I read about, then testing whether they really hold up.</p>
+        <ul class="hero-proof" aria-label="Three results">
+          <li data-reveal><b>73/74</b><span>right source in top 5</span></li>
+          <li data-reveal><b>0 vs 41</b><span>double refunds after crashes</span></li>
+          <li data-reveal><b>10/11</b><span>AI-judge verdicts held up by hand</span></li>
+        </ul>
+        <a class="scroll-cue" href="#work">Scroll <span aria-hidden="true">↓</span></a>
+      </div>
     </section>
 
-    <section id="projects" class="projects" aria-labelledby="projects-title">
-      <div class="section-title"><div><p class="eyebrow">Selected work</p><h2 id="projects-title">Built to be explored.</h2></div><p>Two local demos, with synthetic data.<br>Built together with an AI coding assistant.</p></div>
-      <article class="project" aria-labelledby="dossier-title">
-        <div class="project-visual dossier-visual">
-          <div class="window-label"><span class="window-dot" aria-hidden="true"></span><span>DOCUMENT COLLECTION / LOCAL DEMO</span></div>
-          <img src="assets/dossier-dashboard.jpg" width="1280" height="1297" alt="Dossier Compleet dashboard showing mock client files, document status and a case waiting for human review" loading="lazy">
-          <p class="image-caption">Dossier Compleet · office dashboard · mock scenario</p>
-        </div>
-        <div class="project-copy">
-          <p class="project-category">Document workflow</p>
-          <h3 id="dossier-title">Dossier Compleet</h3>
-          <p class="project-summary">From missing paperwork to a clear next step.</p>
-          <dl class="case-study">
-            <div><dt>Problem</dt><dd>Document requests get scattered across inboxes. Missing items and uncertain uploads need a visible owner.</dd></div>
-            <div><dt>Solution</dt><dd>A client portal and office dashboard with explicit checks, human review, reminders and a local mail outbox.</dd></div>
-            <div><dt>Tech</dt><dd>Python · SQLite · HTML / CSS / JavaScript</dd></div>
-            <div><dt>Result</dt><dd>A working local workflow with tested rules. The default demo uses mock extraction fields; it makes no claim about AI accuracy or client results.</dd></div>
-          </dl>
-          <a class="project-link" href="https://github.com/karimhoceine2-netizen/dossier-compleet">Explore the source <span aria-hidden="true">↗</span><span class="sr-only"> for Dossier Compleet</span></a>
-        </div>
-      </article>
-      <article class="project project-leadflow" aria-labelledby="leadflow-title">
-        <div class="project-visual leadflow-visual">
-          <div class="window-label"><span class="window-dot" aria-hidden="true"></span><span>LEAD INTAKE / LOCAL DEMO</span></div>
-          <img src="assets/leadflow-dashboard.jpg" width="1280" height="987" alt="LeadFlow CRM showing synthetic leads, follow-up statuses and separate workflow processing statuses" loading="lazy">
-          <p class="image-caption">LeadFlow · CRM dashboard · mock webhook transport</p>
-        </div>
-        <div class="project-copy">
-          <p class="project-category">Intake & follow-up</p>
-          <h3 id="leadflow-title">LeadFlow</h3>
-          <p class="project-summary">A submitted form should not become a lost task.</p>
-          <dl class="case-study">
-            <div><dt>Problem</dt><dd>An intake app needs reliable follow-up when delivery fails or the same request arrives more than once.</dd></div>
-            <div><dt>Solution</dt><dd>A CRM backed by a durable event outbox, retries and idempotent processing. Manual follow-up stays separate from automation.</dd></div>
-            <div><dt>Tech</dt><dd>FastAPI · SQLite · Next.js · TypeScript · optional n8n</dd></div>
-            <div><dt>Result</dt><dd>A tested local pipeline with an offline mock-webhook demo. Priority uses fixed rules; live n8n and production deployment are separate next steps.</dd></div>
-          </dl>
-          <a class="project-link" href="https://github.com/karimhoceine2-netizen/leadflow">Explore the source <span aria-hidden="true">↗</span><span class="sr-only"> for LeadFlow</span></a>
-        </div>
-      </article>
+    <!-- Work -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="section-head">
+        <p class="label">Selected work <span>(03)</span></p>
+        <h2 id="work-title" data-split="rise">Three systems, <em>built to hold up.</em></h2>
+      </div>
+
+      <div class="stack">
+        <!-- Rewind -->
+        <article class="card" style="--i:0" aria-labelledby="t-rewind" data-demo="rewind">
+          <div class="card-inner">
+            <div class="card-text">
+              <p class="card-index">01 <span>AI agent runtime · 2026</span></p>
+              <h3 id="t-rewind">Rewind</h3>
+              <p class="lede">Kill the worker halfway through a refund. The customer still gets paid exactly once.</p>
+              <p class="body">Every step of the agent is written to a Postgres event log before the next one starts, so another worker can pick up where the first one fell over. A debugger replays and forks any run without touching the real world.</p>
+              <ul class="tags"><li>TypeScript</li><li>Node.js</li><li>PostgreSQL</li><li>Fastify</li><li>React</li></ul>
+              <a class="card-link" href="https://github.com/karimhoceine2-netizen/rewind" data-cursor="Read the code">Read the code <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="card-vis">
+              <div class="term" aria-label="Terminal: a worker is killed during a refund and another worker finishes it once">
+                <p class="term-bar"><i></i><i></i><i></i><span>rewind — demo:crash</span></p>
+                <ol class="term-lines">
+                  <li><span class="t-dim">$</span> npm run demo:crash</li>
+                  <li>refund order A-100</li>
+                  <li><span class="t-hot">kill -9 worker-1</span> <span class="t-dim">after the refund, before it was recorded</span></li>
+                  <li>worker-2 takes over the run</li>
+                  <li>refunds: 1 &nbsp; emails: 1 &nbsp;<span class="t-volt">✓ exactly once</span></li>
+                </ol>
+              </div>
+              <div class="versus">
+                <p class="versus-cap">Chaos test · 1,000 refund runs · 8 workers · a worker killed every 100 ms</p>
+                <table>
+                  <thead><tr><th scope="col"><span class="sr">Measure</span></th><th scope="col">Rewind</th><th scope="col">Naive loop</th></tr></thead>
+                  <tbody>
+                    <tr><th scope="row">Orders refunded twice</th><td class="good" data-count="0">0</td><td data-count="41">41</td></tr>
+                    <tr><th scope="row">Customers emailed twice</th><td class="good" data-count="0">0</td><td data-count="110">110</td></tr>
+                    <tr><th scope="row">Invariant violations</th><td class="good" data-count="0">0</td><td data-count="151">151</td></tr>
+                  </tbody>
+                </table>
+                <p class="receipt">rewind/docs/RESULTS.md</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- RAG -->
+        <article class="card" style="--i:1" aria-labelledby="t-rag" data-demo="rag">
+          <div class="card-inner">
+            <div class="card-text">
+              <p class="card-index">02 <span>Retrieval &amp; evaluation · 2026</span></p>
+              <h3 id="t-rag">Dutch government RAG</h3>
+              <p class="lede">Answers Dutch questions from Rijksoverheid.nl, cites its sources, and says so when it doesn’t know.</p>
+              <p class="body">I compared four ways of finding text on a versioned set of 112 questions, checked the answers with an LLM judge, and then checked the judge by hand. It runs in Docker on Google Cloud Run with spending limits, and CI guards the scores on every push.</p>
+              <ul class="tags"><li>Python</li><li>FastAPI</li><li>sentence-transformers</li><li>scikit-learn</li><li>Cloud Run</li></ul>
+              <a class="card-link" href="https://github.com/karimhoceine2-netizen/rag-nl-overheid" data-cursor="Read the code">Read the code <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="card-vis">
+              <div class="metrics">
+                <p class="metrics-head"><span>evals.report</span><span>question set v2 · 112</span></p>
+                <ul>
+                  <li style="--v:.986"><span>Right source in top 5</span><b data-frac="73/74">73/74</b><i></i></li>
+                  <li style="--v:.973"><span>Grounded answers · LLM judge</span><b data-frac="72/74">72/74</b><i></i></li>
+                  <li style="--v:.986"><span>Correct citation</span><b data-frac="71/72">71/72</b><i></i></li>
+                  <li style="--v:.921"><span>Correctly refused</span><b data-frac="35/38">35/38</b><i></i></li>
+                </ul>
+                <p class="metrics-note">Judge checked by hand: <b>10 of 11</b> verdicts held up. A classifier for “can I answer this?” scored F1 0.76 against 0.73 for a simple threshold. Too close to ship, so I didn’t.</p>
+                <p class="receipt">rag-nl-overheid/evals/results/</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Multiple Leadflow -->
+        <article class="card" style="--i:2" aria-labelledby="t-mlg" data-demo="flow">
+          <div class="card-inner">
+            <div class="card-text">
+              <p class="card-index">03 <span>B2B automation · private system</span></p>
+              <h3 id="t-mlg">Multiple Leadflow Generator</h3>
+              <p class="lede">One outreach workflow for four audiences, with source checks and human review before a Gmail draft is created.</p>
+              <p class="body">The dashboard brings the research and the proposed message into one place. The operator checks the evidence and the copy before anything is drafted. Nothing is sent automatically.</p>
+              <ul class="tags"><li>Research</li><li>Source checks</li><li>Human review</li><li>Gmail</li></ul>
+              <p class="card-private"><span class="lock" aria-hidden="true"></span>Private system I built and use for my own studio, Magnifize. No public code.</p>
+            </div>
+            <div class="card-vis">
+              <ol class="flow" aria-label="Workflow steps">
+                <li><b>Research</b><span>Find organisations for the selected audience.</span></li>
+                <li><b>Check sources</b><span>Every claim in the message points to evidence.</span></li>
+                <li><b>Review</b><span>A person reads the lead and the proposed copy.</span></li>
+                <li><b>Prepare Gmail draft</b><span>The draft waits in Gmail for the operator.</span></li>
+              </ol>
+              <p class="flow-status"><span class="dot" aria-hidden="true"></span><span id="flow-status">Waiting for review</span></p>
+            </div>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="about" class="about" aria-labelledby="about-title">
-      <div><p class="eyebrow">Still learning. Always building.</p><h2 id="about-title">An AI student who<br>likes to make things work.</h2></div>
-      <div class="about-copy"><p>I’m in my first year of Artificial Intelligence at Vrije Universiteit Amsterdam. I learn by building web and automation projects, testing their behavior, and documenting what I would improve next.</p><p>My current tools include Python, FastAPI, SQLite, JavaScript, TypeScript, React, Next.js and Git. I build with an AI coding assistant: I decide what a project should do, then read, run and test what we produce. Each README explains how it works, what is simulated and what I would improve next.</p><a class="project-link" href="https://github.com/karimhoceine2-netizen">Find me on GitHub <span aria-hidden="true">↗</span></a></div>
+    <!-- More -->
+    <section class="more" id="more" aria-labelledby="more-title">
+      <div class="section-head">
+        <p class="label">More work <span>(07)</span></p>
+        <h2 id="more-title" data-split="rise">Also built, <em>for real clients.</em></h2>
+      </div>
+      <ul class="rows">
+        <li><a class="row" href="https://github.com/karimhoceine2-netizen/leadflow" data-preview="assets/leadflow-dashboard.jpg"><span class="r-name">LeadFlow</span><span class="r-desc">Lead intake with a durable outbox, retries and idempotent processing. Demo data.</span><span class="r-kind">Code</span><span class="r-go" aria-hidden="true">↗</span></a></li>
+        <li><a class="row" href="https://github.com/karimhoceine2-netizen/dossier-compleet" data-preview="assets/dossier-dashboard.jpg"><span class="r-name">Dossier Compleet</span><span class="r-desc">Document collection with decision rules, human review and reminders. Demo data.</span><span class="r-kind">Code</span><span class="r-go" aria-hidden="true">↗</span></a></li>
+        <li><a class="row" href="https://magnifize.nl"><span class="r-name">Magnifize assistant</span><span class="r-desc">Answers visitor questions on magnifize.nl and hands over to a person when it should.</span><span class="r-kind">Live chatbot</span><span class="r-go" aria-hidden="true">↗</span></a></li>
+        <li><div class="row"><span class="r-name">LeadFlow for Mizaan</span><span class="r-desc">Finds schools and organisations and drafts sourced emails, with a Gmail side panel that sums up replies.</span><span class="r-kind">Client app</span><span class="r-go r-private">Private</span></div></li>
+        <li><a class="row" href="https://mizaanjeugdgezin.nl"><span class="r-name">Mizaan Jeugd &amp; Gezin</span><span class="r-desc">Twelve pages for a youth-care organisation, with SEO and a feedback form.</span><span class="r-kind">Website</span><span class="r-go" aria-hidden="true">↗</span></a></li>
+        <li><a class="row" href="https://sabaexposure.nl/"><span class="r-name">SABA Exposure</span><span class="r-desc">A bilingual site, Dutch and English, for a short-form video agency.</span><span class="r-kind">Website</span><span class="r-go" aria-hidden="true">↗</span></a></li>
+        <li><a class="row" href="https://ivso-instituut.nl/"><span class="r-name">IVSO Instituut</span><span class="r-desc">Trainings, programmes and an expert network for a training institute.</span><span class="r-kind">Website</span><span class="r-go" aria-hidden="true">↗</span></a></li>
+      </ul>
+      <div class="preview" id="preview" aria-hidden="true"><img alt="" src="assets/leadflow-dashboard.jpg" width="340" height="213"></div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <p class="label" id="about-title">About</p>
+      <div class="about-body">
+        <p class="scrub" data-scrub>I love the moment a system works for a reason I can explain. I build with AI coding tools every day: I decide what we make, then read, run and test every part of it. Next to my studies I run Magnifize, a small studio where I build chatbots, automations and websites for real clients. I’ve also worked busy kitchen shifts and delivery rounds, so I know what it means to show up and get it done.</p>
+        <dl class="facts">
+          <div data-reveal><dt>Studying</dt><dd>Artificial Intelligence, VU Amsterdam</dd></div>
+          <div data-reveal><dt>Running</dt><dd>Magnifize, a small AI studio</dd></div>
+          <div data-reveal><dt>Based in</dt><dd>Amstelveen</dd></div>
+          <div data-reveal><dt>Working with</dt><dd>Python · TypeScript · FastAPI · PostgreSQL · Docker · Cloud Run</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <p class="label">Say hi</p>
+      <h2 id="contact-title" data-split="rise">Have a role or a project? <em>Let’s talk.</em></h2>
+      <a class="mail" href="mailto:karimhoceine2@gmail.com" data-cursor="Write me">karimhoceine2@gmail.com</a>
+      <div class="contact-actions">
+        <button class="btn btn-ink magnetic" type="button" id="copy" data-email="karimhoceine2@gmail.com"><span>Copy email</span></button>
+        <a class="btn magnetic" href="assets/CV_Karim_Hoceine.pdf" download><span>Download CV (PDF, Dutch)</span></a>
+        <a class="btn magnetic" href="https://linkedin.com/in/karim-hoceine-62ab76440"><span>LinkedIn ↗</span></a>
+        <a class="btn magnetic" href="https://github.com/karimhoceine2-netizen"><span>GitHub ↗</span></a>
+      </div>
+      <p class="contact-sub">I’m based in Amstelveen and happy to come by.</p>
     </section>
   </main>
-  <footer class="footer"><a class="wordmark" href="#top" aria-label="Back to top">karim<span aria-hidden="true">.</span></a><p>Web & automation projects<br><span>© 2026 Karim · No tracking.</span></p><a href="https://github.com/karimhoceine2-netizen/portfolio">This site’s source <span aria-hidden="true">↗</span></a></footer>
-</div>
+
+  <footer class="footer">
+    <div class="footer-row">
+      <p>© 2026 Karim Hoceine</p>
+      <p>No cookies, no tracking.</p>
+      <p><a href="https://github.com/karimhoceine2-netizen/portfolio">Source ↗</a></p>
+    </div>
+    <p class="footer-name" aria-hidden="true">Karim Hoceine</p>
+  </footer>
+
+  <div class="cursor" id="cursor" aria-hidden="true"><span></span></div>
+  <p class="toast" id="toast" role="status" aria-live="polite"></p>
+  <script src="script.js" defer></script>
 </body>
 </html>

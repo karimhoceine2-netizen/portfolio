@@ -1,8 +1,14 @@
-# Karim — web & automation portfolio
+# Karim Hoceine — portfolio
 
-A responsive one-page portfolio for a first-year AI student at Vrije Universiteit Amsterdam. It presents Dossier Compleet and LeadFlow as honest case studies: **Problem, Solution, Tech, Result, Link**.
+My portfolio site: three projects with the numbers behind them. Rewind (a crash-safe runtime for AI agents), a Dutch RAG system with a full evaluation and an outreach workflow with human review, plus LeadFlow, Dossier Compleet, client work and a live chatbot.
 
-Built together with an AI coding assistant. No framework, package installation, analytics, cookies, contact form or external font service is required. All screenshots use synthetic data. The GitHub links use the planned repository names; create and publish those repositories yourself before sharing the page.
+Three project panels stack while you scroll; each one shows its numbers with the source file underneath.
+
+Every number on the page comes from a linked repository:
+- 73/74, 10/11 and 0.76 vs 0.73: [rag-nl-overheid](https://github.com/karimhoceine2-netizen/rag-nl-overheid) `evals/results/` (question set v2)
+- 0 vs 41: [rewind](https://github.com/karimhoceine2-netizen/rewind) `docs/RESULTS.md`
+
+No framework, no build step, no analytics, no cookies, no contact form. The LeadFlow and Dossier Compleet screenshots use demo data.
 
 ## Preview
 
@@ -10,26 +16,23 @@ Built together with an AI coding assistant. No framework, package installation, 
 python3 -m http.server 8097 --bind 127.0.0.1 --directory dist
 ```
 
-Open <http://127.0.0.1:8097>. You can also open `dist/index.html` directly in a browser. The preview command and responsive layout were checked during preparation.
+Open <http://127.0.0.1:8097>, or open `dist/index.html` directly.
 
 ## Deploy on Vercel
 
-Publish the source yourself after completing the checklist. Choose **Other** as the framework preset, no build command, and **dist** as the output directory. No deployment was performed in this chat. See [Vercel build configuration](https://vercel.com/docs/builds/configure-a-build).
+Framework preset **Other**, no build command, output directory **dist** (already set in `vercel.json`, which also adds basic security headers). After the first deploy, replace `SITE_URL` in `dist/index.html` with the live address so link previews show the image.
 
 ## Structure
 
-- `dist/index.html`: content and semantic structure.
-- `dist/style.css`: responsive styles, focus states and reduced-motion support.
-- `dist/assets/`: local screenshots, local fonts and the font license notice.
+- `dist/index.html`: content and semantic structure
+- `dist/styles.css`: layout, tokens, focus states, reduced-motion support
+- `dist/script.js`: hero dot field (Canvas 2D), stacking panels, live panel demos, list previews, copy-email button
+- `dist/assets/`: favicon, link-preview image, CV, fonts and two screenshots
 
-## Lessons learned
+Fonts: Instrument Sans and Geist Mono, self-hosted in `dist/assets/fonts/` (SIL Open Font License, see `LICENSE.txt` there). The site makes no third-party requests.
 
-Show working interfaces before listing tools. State what a demo actually proves, and make simulated behavior visible. Keep contact simple without collecting visitor data.
-
-## What I would improve next
-
-Check the project links after publication, add a deployed URL only after a verified deployment, and ask recruiters for feedback on whether the case studies make the engineering choices clear.
+CV: `dist/assets/CV_Karim_Hoceine.pdf` (Dutch, without phone number).
 
 ## License
 
-[MIT](LICENSE). The included Atkinson fonts retain their SIL Open Font License notice in `dist/assets/atkinson-OFL.txt`.
+[MIT](LICENSE).

@@ -1,0 +1,4 @@
+Instrument Sans (c) The Instrument Sans Project Authors — https://github.com/Instrument/instrument-sans
+Geist Mono (c) Vercel — https://github.com/vercel/geist-font
+Both are licensed under the SIL Open Font License, Version 1.1: https://openfontlicense.org
+Files are the latin subsets served by Google Fonts, self-hosted so visitors make no third-party requests.
